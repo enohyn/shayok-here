@@ -10,6 +10,8 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-megrim: var(--font-megrim-sans);
+  --font-urbanist: var(--font-urbanist-sans);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,7 +22,9 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply box-border p-0 m-0 bg-fixed bg-gradient-to-tr from-zinc-900 via-zinc-900 to-teal-900 font-urbanist;
+}
+
+.container {
+  @apply w-full xl:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
 }
