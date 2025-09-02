@@ -32,7 +32,7 @@ function HeroSection() {
       <div className="hidden lg:flex container mx-auto h-full items-center">
         <div className="outer-box w-6/12 text-center flex justify-center border-t-r py-10">
           <div className="inner-box h-full w-full flex flex-col justify-center">
-            <div className="max-sm:py-10 text-4xl font-semibold lg:text-5xl py-20">
+            <div className="max-sm:py-10 text-4xl font-semibold lg:text-5xl py-48">
               <h1 style={{ WebkitTextFillColor: 'transparent' }} className='font-space drop-shadow-xl bg-gradient-to-r from-gray-300 to-teal-900 bg-clip-text text-transparent'>
                 {`<h1>Shayok</h1>`}
               </h1>
