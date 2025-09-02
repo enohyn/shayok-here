@@ -84,8 +84,8 @@ export function SiteHeader() {
             id="mobile-menu"
             role="dialog"
             aria-modal="true"
-            className={`absolute inset-0 w-full h-[calc(100vh-8vh)] top-[8vh] mobile-menu-backdrops flex flex-col items-center justify-start gap-8 text-2xl
-                        ${clickState ? "translate-x-0" : "-translate-x-[calc(100%+20%)]"}`}
+            className={`fixed top-[8vh] w-full h-[calc(100vh-8vh)] mobile-menu-backdrops z-50 transform transition-transform duration-300
+              ${clickState ? "translate-x-0 left-0" : "-translate-x-full -left-4"}`}
           >
             <div className="w-full inline-flex justify-end p-3">
               <button
