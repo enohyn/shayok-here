@@ -71,33 +71,6 @@ body {
   transition: ease-in-out 3s;
   animation: fadeInOut 4s infinite 3s;
 }
-/* Text sphere css */
-
-.text-shpere {
-  position: relative;
-  display: flex;
-  justify-content: center;
-}
-
-.tagcloud {
-@apply inline-block top-0 left-0 font-megrim;
-  /* font-weight: 600;
-    letter-spacing: 0.062em;
-    font-size: 1.3em; */
-}
-
-/* Change color of each text in sphere on hover  color: #00ffffff;  */
-.tagcloud--item {
-  color: #9ca3af;
-}
-
-.tagcloud--item:hover {
-  color: #0d9488;
-  transition: ease-in-out 0.2s;
-}
-@keyframes blinker {
-  50% { opacity: 0.0; }
-}
 
 @keyframes fadeInOut {
   0% {

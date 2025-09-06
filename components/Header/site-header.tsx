@@ -16,7 +16,7 @@ export function SiteHeader() {
   }
   return (
     <header
-      className={`sticky top-4 rounded-3xl inset-x-0 z-30 isolate h-[8vh] flex items-center
+      className={`sticky top-4 rounded-3xl inset-x-0 z-30 isolate py-3 flex items-center
                  border-b border-white/10 bg-white/10 backdrop-blur-md
                  supports-[backdrop-filter]:bg-white/5
                  shadow-[0_8px_32px_0_rgba(13, 148, 136,0.15)] container ${clickState ? "rounded-b-none" : ""} px-4 lg:px-8`}
