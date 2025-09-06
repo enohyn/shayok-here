@@ -3,10 +3,10 @@ import Image from "next/image"
 import Link from "next/link"
 import { ShayokIcon } from "../../public/icons/shayok-logo"
 import { GiHamburgerMenu } from "react-icons/gi"
-import { FaAngleDoubleLeft } from "react-icons/fa"
+import { FaAngleDoubleLeft, FaAngleLeft } from "react-icons/fa"
 import { VscGithub } from "react-icons/vsc"
 import { AiOutlineLinkedin } from "react-icons/ai"
-import { MENU_PATHS } from "../../constants/menu"
+import { MENU_PATHS } from "../../constants/data"
 import { useState } from "react"
 
 export function SiteHeader() {
@@ -53,6 +53,15 @@ export function SiteHeader() {
 
         {/* Mobile header bar */}
         <div className="lg:hidden sticky flex items-center justify-between w-full">
+
+          <span className="w-7" aria-hidden="true" />
+
+          <Link className="inline-flex justify-center items-center" href="/">
+            <span className="text-3xl font-megrim font-semibold text-white hover:text-teal-600 transition inline-flex items-center">
+              <ShayokIcon className="size-6" />
+              Shayok
+            </span>
+          </Link>
           <button
             aria-label="Open menu"
             aria-expanded={clickState}
@@ -60,18 +69,11 @@ export function SiteHeader() {
             onClick={menuClick}
             className="p-2 text-white hover:text-teal-600"
           >
-            <GiHamburgerMenu className="w-7 h-7" />
+
+            {clickState ? <FaAngleLeft className="size-7" /> : <GiHamburgerMenu className="size-7" />}
           </button>
 
-          <Link className="inline-flex justify-center items-center" href="/shayok-portfolio">
-            <span className="text-2xl font-megrim font-extrabold text-white hover:text-teal-600 transition inline-flex items-center">
-              <ShayokIcon className="size-6" />
-              Shayok
-            </span>
-          </Link>
-
           {/* spacer to balance layout */}
-          <span className="w-7" aria-hidden="true" />
 
           {/* Backdrop (stronger) */}
           <div
@@ -85,17 +87,9 @@ export function SiteHeader() {
             role="dialog"
             aria-modal="true"
             className={`fixed top-[8vh] w-full h-[calc(100vh-8vh)] mobile-menu-backdrops z-50 transform transition-transform duration-300
-              ${clickState ? "translate-x-0 left-0" : "-translate-x-full -left-4"}`}
+              ${clickState ? "translate-x-0 left-0" : "-translate-x-[100vw] -left-4"}`}
           >
-            <div className="w-full inline-flex justify-end p-3">
-              <button
-                aria-label="Close menu"
-                className="p-2 text-white hover:text-teal-600"
-                onClick={menuClick}
-              >
-                <FaAngleDoubleLeft className="w-6 h-6" />
-              </button>
-            </div>
+         
 
             <ul className="px-4 flex flex-col gap-2">
               {MENU_PATHS.map((menu, index) => (
