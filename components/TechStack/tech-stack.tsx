@@ -34,3 +34,5 @@ function TechStack() {
     </section>
   )
 }
+
+export default TechStack;
