@@ -23,7 +23,7 @@ function TechStack() {
                             As a front-end developer, I combine my love for coding with my passion for design to create beautiful and functional websites. My expertise includes HTML, CSS, JavaScript, CMS and React, and I am always eager to learn new technologies and frameworks.
                         </p>
                         <p className='indent-2 text-justify'>
-                            When I'm not coding, you can find me staying active outdoors, whether it's hiking, biking, or playing sports. I believe that maintaining a healthy lifestyle is key to staying energized and productive.
+                            {"When I'm not coding, you can find me staying active outdoors, whether it's hiking, biking, or playing sports. I believe that maintaining a healthy lifestyle is key to staying energized and productive."}
                         </p>
                         <p className="indent-2 text-justify">
                             Overall, I am someone who is passionate about both programming and life, and I strive to bring that enthusiasm to everything I do.

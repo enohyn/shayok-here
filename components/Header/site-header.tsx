@@ -1,5 +1,4 @@
 "use client"
-import Image from "next/image"
 import Link from "next/link"
 import { ShayokIcon } from "../../public/icons/shayok-logo"
 import { GiHamburgerMenu } from "react-icons/gi"
