@@ -9,15 +9,10 @@ const texts = [
 
 const TextSphere = () => {
   const containerRef = useRef<HTMLSpanElement | null>(null);
-
   useEffect(() => {
     let instance: { destroy: () => void } | null = null;
-    if (!containerRef.current) return;
-
     const radiusValue = () => (window.innerWidth <= 425 ? 150 : 200);
-
-    // Dynamic import so build doesn’t try to SSR it
-    (async () => {
+    const setupTagCloud = async () => {
       const TagCloud = (await import("TagCloud")).default;
       const options = {
         radius: radiusValue(),
@@ -25,31 +20,33 @@ const TextSphere = () => {
         initSpeed: "normal" as const,
         keep: true
       };
-      instance = TagCloud(containerRef.current as HTMLElement, texts, options);
-
+      if (containerRef.current) {
+        instance = TagCloud(containerRef.current, texts, options);
+      }
       const onResize = () => {
-        if (instance) {
-          instance.destroy();
-          instance = TagCloud(containerRef.current as HTMLElement, texts, {
+        if (instance) instance.destroy();
+        if (containerRef.current) {
+          instance = TagCloud(containerRef.current, texts, {
             ...options,
             radius: radiusValue()
           });
         }
       };
       window.addEventListener("resize", onResize);
-      // cleanup
       return () => {
         window.removeEventListener("resize", onResize);
-        instance && instance.destroy();
+        if (instance) instance.destroy();
       };
-    })();
+    };
+    let cleanup: (() => void) | undefined;
+    setupTagCloud().then(fn => { cleanup = fn; });
+    return () => { if (cleanup) cleanup(); };
   }, []);
-
   return (
     <div className="text-shpere">
       <span
         ref={containerRef}
-        className="tagcloud text-base lg:text-3xl  font-semibold"
+        className="tagcloud text-base lg:text-3xl font-semibold"
       />
     </div>
   );

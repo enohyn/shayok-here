@@ -36,8 +36,71 @@ body {
 .backdrops {
   @apply relative bg-white/5 z-10 backdrop-filter backdrop-blur-sm shadow-lg;
 }
+
 .outer-box {
   position: relative;
+}
+
+.timeline {
+  @apply relative border-l-[8px] rounded-md;
+  border-image: linear-gradient(to bottom,
+      #9ca3af,
+      #115e59) 1
+}
+
+.scroll-content {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.right-arrow::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 0;
+  width: 0;
+  z-index: 100;
+  left: -.6rem;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent rgba(128, 128, 128, 0.321) transparent transparent;
+}
+
+.scroll-content::-webkit-scrollbar {
+  width: 10px;
+}
+
+.scroll-content::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(31, 38, 135, 0.2);
+  backdrop-filter: blur(8px);
+  border: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+.scroll-content::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 10px;
+}
+
+/* Firefox */
+.scroll-content {
+  position: relative;
+
+  .scroll-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 32px;
+    height: 32px;
+    background: linear-gradient(135deg, transparent 60%, rgba(20, 184, 166, 0.7) 100%);
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+    z-index: 2;
+  }
+
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.25) rgba(255, 255, 255, 0.04);
 }
 
 .outer-box::before {
