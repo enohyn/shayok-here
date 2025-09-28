@@ -14,7 +14,7 @@ function HeroSection() {
             style={{ objectFit: 'contain', borderRadius: '1rem' }}
             className=""
           />
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 dark:bg-gradient-to-t dark:from-zinc-900/70 dark:via-zinc-900/20 dark:to-transparent light:bg-gradient-to-t light:from-slate-100/70 light:via-slate-100/20 light:to-transparent" />
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3" />
           <div className="absolute inset-x-0 bottom-6 z-10 flex justify-center">
             <div className="relative w-full md:w-3/4 bg-white/10 backdrop-blur-sm shadow-lg rounded-xl px-4 py-10 text-center outer-box">
               <h1 className="font-space drop-shadow-xl hero-gradient text-4xl font-semibold">
