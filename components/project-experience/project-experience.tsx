@@ -53,12 +53,12 @@ const ProjectExperience = () => {
       <div className="md:container md:mx-auto flex flex-col w-full h-[900px] gap-y-12 py-24">
         <h2
           id="about-heading"
-          className="font-space text-3xl sm:text-4xl  text-center font-semibold bg-gradient-to-r from-white via-zinc-300 to-teal-800 bg-clip-text text-transparent tracking-wide"
+          className="font-space text-3xl sm:text-4xl text-center font-semibold hero-gradient tracking-wide"
         >
           Project Experience
         </h2>
         <div className="scroll-content container scroll-smooth">
-          <ul className="timeline text-white">
+          <ul className="timeline theme-text">
             {projectExperienceData.map((exp, idx) => {
               const isOpen = openIdx === idx;
               return (
@@ -76,17 +76,17 @@ const ProjectExperience = () => {
                     className={`w-full p-5 shadow-teal-900/70 text-left bg-gradient-to-tl from-transparent via-transparent to-white/10 rounded-xl flex items-center justify-between gap-4 transition-all ${isOpen ? 'rounded-b-none' : 'shadow-sm'}`}
                   >
                     <div className="flex flex-col items-start gap-x-4 gap-y-2">
-                      <time className="text-sm font-bold leading-none text-gray-400">
+                      <time className="text-sm font-bold leading-none theme-text opacity-60">
                         {exp.duration}
                       </time>
                       <span className="text-lg font-semibold">
                         <span className="text-teal-600">Project: </span>{exp.projectName}
                       </span>
-                      <span className="text-base font-medium text-gray-300">
+                      <span className="text-base font-medium theme-text opacity-75">
                         <span className="text-teal-600">Client: </span>{exp.clientName}
                       </span>
                     </div>
-                    <span className={`text-gray-300 transition-transform duration-200 ${isOpen ? 'rotate-90' : ''}`}>▶</span>
+                    <span className={`theme-text opacity-75 transition-transform duration-200 ${isOpen ? 'rotate-90' : ''}`}>▶</span>
                   </button>
 
                   {/* Body with expand/collapse transition */}
@@ -99,7 +99,7 @@ const ProjectExperience = () => {
                     }`}
                   >
                     <div className="overflow-hidden">
-                      <div className="bg-gradient-to-br from-transparent via-transparent to-white/10 rounded-b-xl rounded-t-none px-6 py-4 text-gray-200">
+                      <div className="bg-gradient-to-br from-transparent via-transparent to-white/10 rounded-b-xl rounded-t-none px-6 py-4 theme-text opacity-85">
                         <ul className="list-disc space-y-2">
                           {exp.responsiblities.map((res, i) => (
                             <li key={i}>{res}</li>

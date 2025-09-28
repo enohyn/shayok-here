@@ -2,11 +2,12 @@
 import Link from "next/link"
 import { ShayokIcon } from "../../public/icons/shayok-logo"
 import { GiHamburgerMenu } from "react-icons/gi"
-import { FaAngleDoubleLeft, FaAngleLeft } from "react-icons/fa"
+import { FaAngleLeft } from "react-icons/fa"
 import { VscGithub } from "react-icons/vsc"
 import { AiOutlineLinkedin } from "react-icons/ai"
 import { MENU_PATHS } from "../../constants/data"
 import { useState } from "react"
+import { ThemeToggle } from "../ThemeToggle/theme-toggle"
 
 export function SiteHeader() {
   const [clickState, setClickState] = useState(false);
@@ -17,14 +18,14 @@ export function SiteHeader() {
   return (
     <header
       className={`sticky top-4 rounded-3xl inset-x-0 z-30 isolate py-3 flex items-center
-                 border-b border-white/10 bg-white/10 backdrop-blur-md
+                 theme-header backdrop-blur-md
                  supports-[backdrop-filter]:bg-white/5
                  shadow-[0_8px_32px_0_rgba(13, 148, 136,0.15)] container ${clickState ? "rounded-b-none" : ""} px-4 lg:px-8`}
     >
       <nav className="w-full flex items-center justify-between">
         {/* Desktop */}
         <div className="hidden lg:flex items-center justify-between w-full">
-          <ul className="list-none capitalize flex items-center gap-4 text-white w-1/3">
+          <ul className="list-none capitalize flex items-center gap-4 theme-text w-1/3">
             <li className="hover:text-teal-600">
               <Link href="#">About</Link>
             </li>
@@ -34,18 +35,19 @@ export function SiteHeader() {
           </ul>
 
           <Link className="inline-flex w-1/3 justify-center items-center" href="/shayok-portfolio">
-            <span className="font-megrim font-extrabold text-2xl text-white hover:text-teal-600 transition inline-flex items-center">
+            <span className="font-megrim font-extrabold text-2xl theme-text hover:text-teal-600 transition inline-flex items-center">
               <ShayokIcon className="size-6" />
               Shayok
             </span>
           </Link>
 
-          <div className="flex gap-x-4 w-1/3 justify-end">
+          <div className="flex gap-x-4 w-1/3 justify-end items-center">
+            <ThemeToggle />
             <Link href="https://github.com/enohyn" target="_blank">
-              <VscGithub className="size-6 text-white hover:text-teal-600 transition" />
+              <VscGithub className="size-6 theme-text hover:text-teal-600 transition" />
             </Link>
             <Link href="https://www.linkedin.com/in/shayok-here/" target="_blank">
-              <AiOutlineLinkedin className="size-6 text-white hover:text-teal-600 transition" />
+              <AiOutlineLinkedin className="size-6 theme-text hover:text-teal-600 transition" />
             </Link>
           </div>
         </div>
@@ -56,7 +58,7 @@ export function SiteHeader() {
           <span className="w-7" aria-hidden="true" />
 
           <Link className="inline-flex justify-center items-center" href="/">
-            <span className="text-3xl font-megrim font-semibold text-white hover:text-teal-600 transition inline-flex items-center">
+            <span className="text-3xl font-megrim font-semibold theme-text hover:text-teal-600 transition inline-flex items-center">
               <ShayokIcon className="size-6" />
               Shayok
             </span>
@@ -66,7 +68,7 @@ export function SiteHeader() {
             aria-expanded={clickState}
             aria-controls="mobile-menu"
             onClick={menuClick}
-            className="p-2 text-white hover:text-teal-600"
+            className="p-2 theme-text hover:text-teal-600"
           >
 
             {clickState ? <FaAngleLeft className="size-7" /> : <GiHamburgerMenu className="size-7" />}
@@ -96,20 +98,23 @@ export function SiteHeader() {
                   <Link
                     href={menu.path}
                     onClick={menuClick}
-                    className="text-white text-xl py-2 px-3 rounded hover:text-teal-600 transition"
+                    className="theme-text text-xl py-2 px-3 rounded hover:text-teal-600 transition"
                   >
                     {menu.title}
                   </Link>
                 </li>
               ))}
               <li className="mt-2">
-                <div className="flex justify-center items-center gap-x-4 pb-6">
-                  <Link href="https://github.com/enohyn" target="_blank" onClick={menuClick}>
-                    <VscGithub className="w-7 h-7 text-white hover:text-teal-600 transition" />
-                  </Link>
-                  <Link href="https://www.linkedin.com/in/shayok-here/" target="_blank" onClick={menuClick}>
-                    <AiOutlineLinkedin className="w-7 h-7 text-white hover:text-teal-600 transition" />
-                  </Link>
+                <div className="flex flex-col items-center gap-4 pb-6">
+                  <ThemeToggle />
+                  <div className="flex justify-center items-center gap-x-4">
+                    <Link href="https://github.com/enohyn" target="_blank" onClick={menuClick}>
+                      <VscGithub className="w-7 h-7 theme-text hover:text-teal-600 transition" />
+                    </Link>
+                    <Link href="https://www.linkedin.com/in/shayok-here/" target="_blank" onClick={menuClick}>
+                      <AiOutlineLinkedin className="w-7 h-7 theme-text hover:text-teal-600 transition" />
+                    </Link>
+                  </div>
                 </div>
               </li>
             </ul>

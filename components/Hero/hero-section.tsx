@@ -14,13 +14,13 @@ function HeroSection() {
             style={{ objectFit: 'contain', borderRadius: '1rem' }}
             className=""
           />
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-zinc-900/70 via-zinc-900/20 to-transparent" />
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 dark:bg-gradient-to-t dark:from-zinc-900/70 dark:via-zinc-900/20 dark:to-transparent light:bg-gradient-to-t light:from-slate-100/70 light:via-slate-100/20 light:to-transparent" />
           <div className="absolute inset-x-0 bottom-6 z-10 flex justify-center">
             <div className="relative w-full md:w-3/4 bg-white/10 backdrop-blur-sm shadow-lg rounded-xl px-4 py-10 text-center outer-box">
-              <h1 style={{ WebkitTextFillColor: 'transparent' }} className="font-space drop-shadow-xl bg-gradient-to-r from-gray-300 to-teal-900 bg-clip-text text-transparent text-4xl font-semibold">
+              <h1 className="font-space drop-shadow-xl hero-gradient text-4xl font-semibold">
                 {`<h1>Shayok</h1>`}
               </h1>
-              <h1 style={{ WebkitTextFillColor: 'transparent' }} className="mt-1 font-space bg-gradient-to-r from-gray-300 to-teal-900 bg-clip-text text-transparent text-4xl font-semibold">
+              <h1 className="mt-1 font-space hero-gradient text-4xl font-semibold">
                 Front End Developer
               </h1>
             </div>
@@ -33,10 +33,10 @@ function HeroSection() {
         <div className="outer-box w-6/12 text-center flex justify-center border-t-r py-10">
           <div className="inner-box h-full w-full flex flex-col justify-center">
             <div className="max-sm:py-10 text-4xl font-semibold lg:text-5xl py-40">
-              <h1 style={{ WebkitTextFillColor: 'transparent' }} className='font-space drop-shadow-xl bg-gradient-to-r from-gray-300 to-teal-900 bg-clip-text text-transparent'>
+              <h1 className='font-space drop-shadow-xl hero-gradient'>
                 {`<h1>Shayok</h1>`}
               </h1>
-              <h1 style={{ WebkitTextFillColor: 'transparent' }} className='font-space bg-gradient-to-r from-gray-300 to-teal-900 bg-clip-text text-transparent'>
+              <h1 className='font-space hero-gradient'>
                 Front End Developer
               </h1>
             </div>

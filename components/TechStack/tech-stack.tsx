@@ -12,7 +12,7 @@ function TechStack() {
         <header className="flex flex-col items-center gap-3 text-center">
           <h2
             id="about-heading"
-            className="font-space text-3xl sm:text-4xl font-semibold bg-gradient-to-r from-white via-zinc-300 to-teal-800 bg-clip-text text-transparent tracking-wide"
+            className="font-space text-3xl sm:text-4xl font-semibold hero-gradient tracking-wide"
           >
             Tech Stack
           </h2>
@@ -27,8 +27,8 @@ function TechStack() {
           </div>
 
           {/* Narrative */}
-          <div className="flex flex-col gap-6 text-white  px-4 py-6 rounded-r-2xl">
-            <div className="space-y-5 leading-relaxed text-white/85">
+          <div className="flex flex-col gap-6 theme-text px-4 py-6 rounded-r-2xl">
+            <div className="space-y-5 leading-relaxed theme-text opacity-85">
               These are the tools I work with every day — not just names on a
               list, but the technologies I rely on to bring ideas to life.
               <ul className="list-disc list-inside mt-2 space-y-4">

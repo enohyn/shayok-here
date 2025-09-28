@@ -6,7 +6,7 @@ import ProjectExperience from "../../components/project-experience/project-exper
 
 export default function Home() {
   return (
-    <div className="bg-fixed bg-gradient-to-tr from-zinc-900 via-zinc-900 to-teal-900 w-screen">
+    <div className="w-screen">
       <SiteHeader />
       <HeroSection />
       <TechStack />

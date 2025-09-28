@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist_Mono, Megrim, Urbanist } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "../contexts/theme-context";
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -32,9 +33,11 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={`${urbanist.variable} ${geistMono.variable} ${megrim.variable} antialiased`}>
-        {children}
+        <ThemeProvider defaultTheme="dark" storageKey="shayok-theme">
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
