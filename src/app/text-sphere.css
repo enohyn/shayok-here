@@ -15,9 +15,13 @@
     font-size: 1.3em; */
 }
 
-/* Change color of each text in sphere on hover  color: #00ffffff;  */
-.tagcloud--item {
+/* Theme-aware colors for text sphere items */
+.dark .tagcloud--item {
     color: #9ca3af;
+}
+
+.light .tagcloud--item {
+    color: #374151;
 }
 
 .tagcloud--item:hover {

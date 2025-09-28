@@ -4,7 +4,7 @@ import { AiOutlineLinkedin } from "react-icons/ai";
 import { VscGithub } from 'react-icons/vsc';
 function SiteFooter() {
   return (
-    <footer className='relative h-full border-t-l bottom-0 flex items-center theme-header'>
+    <footer className='relative h-full border-t-l bottom-0 flex items-center'>
       <nav className='py-4 w-full container mx-auto'>
         <div className='flex justify-between items-center'>
           <a href='#meet-shayok' className='list-none capitalize flex items-center justify-start w-1/3'>
