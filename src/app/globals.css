@@ -35,7 +35,7 @@ body {
 
 /* Light theme styles */
 .light body {
-  @apply bg-gradient-to-tr from-neutral-200 via-neutral-300 to-teal-900;
+  @apply bg-gradient-to-tr from-neutral-200 via-neutral-300 to-teal-900/60;
 }
 
 /* Theme-aware text colors */
