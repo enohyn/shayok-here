@@ -4,39 +4,73 @@ import { FiCode } from "react-icons/fi";
 
 const projectExperienceData = [
   {
-    duration: `August 1 2023 - ${new Date().toDateString()}`,
-    projectName: "Self-Sign On, Webshop , Show-case, Reservation",
+    duration: "June 2025 – Present",
+    projectName: "Collaborate Sourcing Services",
+    clientName: "Collaborate Sourcing Services",
+    responsiblities: [
+      "Developed end-to-end solution to parse Excel booking forms and map entries to Purchase Order (PO) spreadsheets to produce a report with inline validation and manual correction",
+      "Maintained admin workflows and data entities (factories, suppliers, users) to support mapping and reconciliation, improving operational efficiency",
+      "Delivered downloadable business-ready reports and a lightweight dashboard, reducing manual reconciliation time and data errors",
+    ],
+  },
+  {
+    duration: "Mar 2025 – May 2025",
+    projectName: "Resource Management Platform",
+    clientName: "Vivasoft Limited",
+    responsiblities: [
+      "Lead frontend development of a micro-frontend resource-tracking dashboard using React.js, React Query, and Tailwind CSS",
+      "Built allocation widgets, filter controls, and drag-and-drop assignment features for real-time staffing visibility",
+      "Collaborated with stakeholders to translate requirements into modular UI components, reducing resource conflicts by 30%",
+    ],
+  },
+  {
+    duration: "Jan 2025 – Feb 2025",
+    projectName: "Vivakit UI-Library",
+    clientName: "Vivakit",
+    responsiblities: [
+      "Designed and developed a reusable React component library (Tabs, Select, Datepicker, Modal) with Prop-driven APIs",
+      "Published package to npm and maintained semantic versioning",
+      "Authored usage documentation and examples, cutting UI development time by 40%",
+    ],
+  },
+  {
+    duration: "Aug 2024 – Dec 2024",
+    projectName: "Maxis Digital Insights",
+    clientName: "Maxis Digital Insights",
+    responsiblities: [
+      "Implemented multi-tenant dashboards with Next.js, Redux Toolkit, and React Hook Form",
+      "Developed tenant-specific theming and authentication flows",
+      "Optimized chart rendering and page-load performance, achieving 99.8% uptime and 35% faster load times",
+    ],
+  },
+  {
+    duration: "Aug 2023 – Jul 2024",
+    projectName: "Klikit Webshop Platform",
     clientName: "Klikit",
     responsiblities: [
-      "Maintain and create reusable components with React JS, Formik, Redux toolkit for business owners to sign-up and create a Web shop for their chain of restaurants.",
-      "Using browsers native functionality to maintain a Web shop for consumers to place order and gain seamless insight of order details and Reservation",
-      "Design and maintain website for business owner to “Show case” their restaurant and food.",
-      "Maintain and update user experience for consumers",
-      "Localization support for consumer-end web application i.e Webshop and Reservation",
-      "Debugging and bug fixes for features developed",
-      "Make a responsive design for different devices using Sass and Tailwind CSS",
+      "Developed merchant onboarding and consumer storefront features using React.js, Next.js, Redux Toolkit, and Formik",
+      "Implemented responsive layouts with Tailwind CSS and Sass for cross-device compatibility",
+      "Added localization support and date-fns integration for time-zone-aware reservation logic",
     ],
   },
   {
-    duration: "November 2022 - July 2023",
-    projectName: "Software for disabled people-SD17",
+    duration: "Jul 2022 – Jun 2023",
+    projectName: "SD17 Sign-Language Platform",
     clientName: "Bangladesh Computer Council",
     responsiblities: [
-      "Visual component analysis to use in web application specifically for disabled people",
-      "Create reusable components for web application using React JS",
-      "Make a responsive design for different devices using Tailwind CSS",
+      "Built accessible video chat, live-caption, and sign-language glossary components in React.js",
+      "Ensured low-bandwidth performance and mobile responsiveness with Tailwind CSS",
+      "Integrated RESTful APIs for real-time interpretation sessions",
     ],
   },
   {
-    duration: "April 2022 - October 2022",
-    projectName:
-      "Data Analytics using BI (Business Intelligence) tool Qlik Sense",
+    duration: "Apr 2022 – Sep 2022",
+    projectName: "BI Analytics Dashboard",
     clientName: "Mandara Stocks, Early data, ASEAN data",
     responsiblities: [
-      "Create and design data models for data visualization",
-      "Maintain extract transform and load process for incremental data",
-      "Dashboard preparation, Analysis, and Reporting for data-driven companies",
-      "Determine data visualization components from UI/UX perspective",
+      "Designed and implemented ETL pipelines for incremental sales and product data",
+      "Developed interactive React.js visualizations (tables, charts) and drill-down filters",
+      "Collaborated on UI/UX to deliver predictive insights, improving forecast accuracy by 20%",
     ],
   },
 ];
@@ -45,27 +79,37 @@ const ProjectExperience = () => {
   const [openIdx, setOpenIdx] = useState<number | null>(0);
 
   const toggle = (idx: number) => {
-    setOpenIdx(prev => (prev === idx ? null : idx));
+    setOpenIdx((prev) => (prev === idx ? null : idx));
   };
 
   return (
-    <section id="portfolio" className="flex h-full xl:h-[100vh]">
-      <div className="md:container md:mx-auto flex flex-col w-full h-[900px] gap-y-12 py-24">
+    <section id="portfolio">
+      <div className="flex flex-col w-full gap-y-12 py-24">
         <h2
           id="about-heading"
           className="font-space text-3xl sm:text-4xl text-center font-semibold hero-gradient tracking-wide"
         >
           Project Experience
         </h2>
-        <div className="scroll-content container scroll-smooth">
+        <div className="scroll-content container scroll-smooth h-[calc(100vh_-_400px)] pt-1 overflow-y-auto">
           <ul className="timeline theme-text">
             {projectExperienceData.map((exp, idx) => {
               const isOpen = openIdx === idx;
               return (
-                <li key={idx} className={`mb-6 ml-4 relative ${isOpen ? 'shadow-sm shadow-teal-900 rounded-xl' : ''}`}>
+                <li
+                  key={idx}
+                  className={`mb-6 ml-4 relative ${
+                    isOpen ? "shadow-sm shadow-teal-900 rounded-xl" : ""
+                  }`}
+                >
                   {/* left icon dot */}
                   <span className="absolute inline-flex justify-center items-center w-8 h-8 bg-gradient-to-br from-zinc-900 via-zinc-700 to-teal-900 rounded-full mt-2 -translate-x-1/2 -left-5 border border-teal-700 dark:border-gray-900 dark:bg-gray-700">
-                    <FiCode color="#d1d5db" className="z-10 text-xl rotate-6" width={8} height={8} />
+                    <FiCode
+                      color="#d1d5db"
+                      className="z-10 text-xl rotate-6"
+                      width={8}
+                      height={8}
+                    />
                   </span>
 
                   {/* Header button */}
@@ -73,20 +117,30 @@ const ProjectExperience = () => {
                     onClick={() => toggle(idx)}
                     aria-expanded={isOpen}
                     aria-controls={`exp-panel-${idx}`}
-                    className={`w-full p-5 shadow-teal-900/70 text-left bg-gradient-to-tl from-transparent via-transparent to-white/10 rounded-xl flex items-center justify-between gap-4 transition-all ${isOpen ? 'rounded-b-none' : 'shadow-sm'}`}
+                    className={`w-full p-5 shadow-teal-900/70 text-left bg-gradient-to-tl from-transparent via-transparent to-white/10 rounded-xl flex items-center justify-between gap-4 transition-all ${
+                      isOpen ? "rounded-b-none" : "shadow-sm"
+                    }`}
                   >
                     <div className="flex flex-col items-start gap-x-4 gap-y-2">
                       <time className="text-sm font-bold leading-none theme-text opacity-60">
                         {exp.duration}
                       </time>
                       <span className="text-lg font-semibold">
-                        <span className="text-teal-600">Project: </span>{exp.projectName}
+                        <span className="text-teal-600">Project: </span>
+                        {exp.projectName}
                       </span>
                       <span className="text-base font-medium theme-text opacity-75">
-                        <span className="text-teal-600">Client: </span>{exp.clientName}
+                        <span className="text-teal-600">Client: </span>
+                        {exp.clientName}
                       </span>
                     </div>
-                    <span className={`theme-text opacity-75 transition-transform duration-200 ${isOpen ? 'rotate-90' : ''}`}>▶</span>
+                    <span
+                      className={`theme-text opacity-75 transition-transform duration-200 ${
+                        isOpen ? "rotate-90" : ""
+                      }`}
+                    >
+                      ▶
+                    </span>
                   </button>
 
                   {/* Body with expand/collapse transition */}
@@ -95,7 +149,9 @@ const ProjectExperience = () => {
                     role="region"
                     aria-labelledby={`exp-header-${idx}`}
                     className={`ml-2 grid transition-all duration-300 ease-out ${
-                      isOpen ? '[grid-template-rows:1fr]' : '[grid-template-rows:0fr]'
+                      isOpen
+                        ? "[grid-template-rows:1fr]"
+                        : "[grid-template-rows:0fr]"
                     }`}
                   >
                     <div className="overflow-hidden">

@@ -1,7 +1,7 @@
 export const MENU_PATHS = [
     {
-        path: "#about",
-        title: "About"
+        path: "#tech-stack",
+        title: "Tech Stack"
     },
     {
         path: "#portfolio",

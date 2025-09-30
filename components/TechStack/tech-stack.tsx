@@ -4,8 +4,8 @@ import TextSphere from "./text-sphere";
 function TechStack() {
   return (
     <section
-      id="about"
-      aria-labelledby="about-heading"
+      id="tech-stack"
+      aria-labelledby="tech-stack-heading"
       className="relative py-24 container mx-auto"
     >
       <div className="portfolio-box rounded-xl flex flex-col gap-14">

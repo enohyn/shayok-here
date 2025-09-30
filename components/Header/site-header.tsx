@@ -27,10 +27,10 @@ export function SiteHeader() {
         <div className="hidden lg:flex items-center justify-between w-full">
           <ul className="list-none capitalize flex items-center gap-4 theme-text w-1/3">
             <li className="hover:text-teal-600">
-              <Link href="#">About</Link>
+              <Link href="#tech-stack">Tech stack</Link>
             </li>
             <li className="hover:text-teal-600">
-              <Link href="#">Experience</Link>
+              <Link href="#portfolio">Experience</Link>
             </li>
           </ul>
 

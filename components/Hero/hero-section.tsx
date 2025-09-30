@@ -3,7 +3,7 @@ import React from 'react'
 
 function HeroSection() {
   return (
-    <section id="meet-shayok" className="relative h-[calc(100vh-100px)]">
+    <section id="meet-shayok" className="relative">
       {/* Mobile/Tablet (under lg): image fills section, heading overlaps bottom */}
       <div className="container mx-auto h-full lg:hidden">
         <div className="relative h-full w-full flex justify-center">
