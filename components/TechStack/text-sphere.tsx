@@ -46,7 +46,7 @@ const TextSphere = () => {
     <div className="text-shpere">
       <span
         ref={containerRef}
-        className="tagcloud text-base lg:text-3xl font-semibold"
+        className="tagcloud text-2xl lg:text-3xl font-semibold"
       />
     </div>
   );

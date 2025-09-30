@@ -7,8 +7,4 @@ export const MENU_PATHS = [
         path: "#portfolio",
         title: "Portfolio"
     },
-    {
-        path: "/sign-in",
-        title: "Sign In"
-    },
 ]
