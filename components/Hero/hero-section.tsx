@@ -6,7 +6,7 @@ function HeroSection() {
     <section id="meet-shayok" className="relative">
       {/* Mobile/Tablet (under lg): image fills section, heading overlaps bottom */}
       <div className="container mx-auto h-full lg:hidden">
-        <div className="relative h-full w-full flex justify-center">
+        <div className="relative h-[calc(100vh-100px)] w-full flex justify-center">
           <Image
             src="/images/enohyn.png"
             alt="shayok"
