@@ -83,14 +83,16 @@ const ProjectExperience = () => {
   };
 
   return (
-    <section id="portfolio">
-      <div className="flex flex-col w-full gap-y-12 py-24">
-        <h2
-          id="about-heading"
-          className="font-space text-3xl sm:text-4xl text-center font-semibold hero-gradient tracking-wide"
-        >
-          Project Experience
-        </h2>
+    <section id="portfolio" className="relative py-20 lg:py-28 container mx-auto">
+      <div className="portfolio-box rounded-xl flex flex-col gap-16">
+        <header className="flex flex-col items-center gap-3 text-center mb-2">
+          <h2
+            id="about-heading"
+            className="font-space text-3xl sm:text-4xl font-semibold hero-gradient tracking-wide"
+          >
+            Project Experience
+          </h2>
+        </header>
         <div className="scroll-content container scroll-smooth h-[calc(100vh_-_400px)] pt-1 overflow-y-auto">
           <ul className="timeline theme-text">
             {projectExperienceData.map((exp, idx) => {
