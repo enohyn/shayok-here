@@ -48,9 +48,9 @@ export function SiteHeader() {
 
           <Link
             className="inline-flex w-1/3 justify-center items-center"
-            href="/shayok-portfolio"
+            href="/"
           >
-            <span className="font-megrim font-extrabold text-2xl theme-text hover:text-teal-600 transition inline-flex items-center">
+            <span className="font-megrim font-extrabold text-2xl hover:text-teal-600 transition inline-flex items-center">
               <ShayokIcon className="size-6" />
               Shayok
             </span>
@@ -75,7 +75,7 @@ export function SiteHeader() {
           <span className="w-7" aria-hidden="true" />
 
           <Link className="inline-flex justify-center items-center" href="/">
-            <span className="text-2xl font-megrim font-semibold theme-text hover:text-teal-600 transition inline-flex items-center">
+            <span className="text-2xl font-megrim font-semibold hover:text-teal-600 transition inline-flex items-center">
               <ShayokIcon className="size-6" />
               Shayok
             </span>
