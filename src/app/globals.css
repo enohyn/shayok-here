@@ -73,7 +73,9 @@ section {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
+.header-container {
+  @apply w-11/12 xl:max-w-7xl mx-auto px-3 sm:px-6 lg:px-8;
+}
 .container {
   @apply w-full xl:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
 }
